@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首頁</title>
+    <!--<meta http-equiv="refresh" content="20">-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="UTF-8">
+        function myload(){
+            var time = new Date();
+            console.log(time)
+            //var t = $("#time");
+            //console.log(t)
+
+            /*$(document).ready(
+                function(){
+                    //alert('start');
+                    setInterval(
+                        function(){
+                            t.text("時間：" + time)
+                        }, 
+                    1000);
+                    console.log('')
+                }
+            );*/
+        }
+
+        /*function myrefresh(){
+            window.location.reload();
+        }
+        setTimeout('myrefresh()', 1000);*/
+
+        function current_time(){
+            var now = new Date();
+            year = now.getFullYear();
+            month = now.getMonth()+1;
+            day = now.getDate();
+            h = now.getHours();
+            m = now.getMinutes();
+            s = now.getSeconds();
+            document.getElementById('time').innerText = "現在時間：" + year + " 年 " + month + " 月 " + day + " 日 " + h + " 時 " + m + " 分 " + s + " 秒";
+            setTimeout('current_time()', 1000);
+        }
+    </script>
+</head>
+<body onload="current_time()">
+    <h1>我是首頁</h1>
+    <div id="time"></div>
+</body>
+</html>

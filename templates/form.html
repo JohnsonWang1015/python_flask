@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Web Form</title>
+</head>
+<body>
+    <h1>This header is from HTML 檔案</h1>
+    Flask App </br>
+
+    <!--<fieldset>
+        <legend>表格</legend>
+        <form method="post" action="/login">
+            <input type="text" name="username" />
+            </br></br>
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset> -->
+
+    <fieldset>
+        <legend>表格</legend>
+        <form method="post" action={{url_for('login')}}>
+            <p><input type="text" name="username" /></p>
+            <p><button type="submit">Submit</button></p>
+        </form>
+    </fieldset>
+</body>
+</html>
